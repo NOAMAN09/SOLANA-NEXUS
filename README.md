@@ -81,7 +81,7 @@ You can deploy this application to any static hosting service:
 ## Project Structure
 
 ```
-solana-demo/
+SOLANA-NEXUS/
 ├── public/              # Static assets
 ├── src/
 │   ├── components/      # Reusable UI components
