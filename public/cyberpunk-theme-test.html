@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk Theme Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cyber-blue: #00FFFF;
+      --cyber-purple: #9D00FF;
+      --cyber-pink: #FF00F5;
+      --cyber-yellow: #FFD600;
+      --cyber-green: #00FF9D;
+      --cyber-dark: #0D0B1E;
+      --cyber-darker: #070617;
+    }
+    
+    body {
+      background-color: var(--cyber-darker);
+      color: white;
+      font-family: 'Rajdhani', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .cyber-font {
+      font-family: 'Orbitron', 'Rajdhani', 'Audiowide', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    
+    .cyber-heading {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      color: var(--cyber-blue);
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.4);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .cyber-card {
+      background-color: rgba(13, 11, 30, 0.7);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(157, 0, 255, 0.1);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cyber-button {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to right, var(--cyber-blue), var(--cyber-purple));
+      color: black;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .cyber-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.5);
+    }
+    
+    .cyber-grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    
+    .cyber-glow {
+      animation: cyber-glow 3s infinite;
+    }
+    
+    @keyframes cyber-glow {
+      0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.5);
+      }
+    }
+    
+    .cyber-text-glow {
+      animation: cyber-text-glow 3s infinite;
+    }
+    
+    @keyframes cyber-text-glow {
+      0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.5);
+      }
+    }
+    
+    .cyber-pulse {
+      animation: cyber-pulse 3s infinite;
+    }
+    
+    @keyframes cyber-pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+    
+    .cyber-circuit-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M10 10h80v80H10z' stroke='rgba(0, 255, 255, 0.1)' stroke-width='1' fill='none'/%3E%3Cpath d='M30 10v80M50 10v80M70 10v80M10 30h80M10 50h80M10 70h80' stroke='rgba(0, 255, 255, 0.05)' stroke-width='1'/%3E%3Ccircle cx='10' cy='10' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='30' cy='10' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='50' cy='10' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='70' cy='10' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='90' cy='10' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='10' cy='30' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='30' cy='30' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='50' cy='30' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='70' cy='30' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='90' cy='30' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='10' cy='50' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='30' cy='50' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='50' cy='50' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='70' cy='50' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='90' cy='50' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='10' cy='70' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='30' cy='70' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='50' cy='70' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='70' cy='70' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='90' cy='70' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='10' cy='90' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='30' cy='90' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='50' cy='90' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='70' cy='90' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3Ccircle cx='90' cy='90' r='2' fill='rgba(0, 255, 255, 0.2)'/%3E%3C/svg%3E");
+      z-index: -2;
+      opacity: 0.1;
+      animation: circuit-flow 20s linear infinite;
+    }
+    
+    @keyframes circuit-flow {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+    
+    .cyber-particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      filter: blur(30px);
+    }
+    
+    .particle:nth-child(1) {
+      top: 20%;
+      left: 20%;
+      background-color: rgba(0, 255, 255, 0.1);
+      animation: cyber-pulse 4s infinite;
+    }
+    
+    .particle:nth-child(2) {
+      top: 60%;
+      left: 70%;
+      background-color: rgba(157, 0, 255, 0.1);
+      animation: cyber-pulse 5s infinite;
+      animation-delay: 1s;
+    }
+    
+    .particle:nth-child(3) {
+      top: 30%;
+      left: 80%;
+      background-color: rgba(255, 0, 245, 0.1);
+      animation: cyber-pulse 6s infinite;
+      animation-delay: 2s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background effects -->
+  <div class="cyber-circuit-bg"></div>
+  <div class="cyber-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  
+  <div class="container">
+    <h1 class="cyber-heading cyber-text-glow">SOLANA NEXUS</h1>
+    
+    <div class="cyber-card">
+      <div class="cyber-grid-bg"></div>
+      <h2 class="cyber-font" style="color: var(--cyber-blue);">CYBERPUNK THEME TEST</h2>
+      <p>This is a test page for the cyberpunk theme. The theme features neon colors, glowing effects, and a futuristic design inspired by cyberpunk aesthetics.</p>
+      
+      <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+        <button class="cyber-button">CONNECT WALLET</button>
+        <button class="cyber-button" style="background: linear-gradient(to right, var(--cyber-purple), var(--cyber-pink));">EXECUTE SWAP</button>
+      </div>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+      <div class="cyber-card cyber-glow">
+        <h3 class="cyber-font" style="color: var(--cyber-purple);">PORTFOLIO VALUE</h3>
+        <p style="font-size: 2rem; font-weight: bold;">$12,345.67</p>
+        <p style="color: var(--cyber-green);">+5.67% today</p>
+      </div>
+      
+      <div class="cyber-card">
+        <h3 class="cyber-font" style="color: var(--cyber-blue);">NETWORK STATUS</h3>
+        <p style="font-size: 1.5rem; font-weight: bold;">4,289 TPS</p>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
+          <div style="width: 8px; height: 8px; background-color: var(--cyber-green); border-radius: 50%;" class="cyber-pulse"></div>
+          <span style="color: var(--cyber-green);" class="cyber-font">NETWORK OPTIMAL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
