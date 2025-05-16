@@ -1,4 +1,4 @@
-# Solana Demo Dashboard
+# Solana  Dashboard
 
 A modern web application for interacting with the Solana blockchain. This dashboard provides a user-friendly interface for managing Solana tokens, viewing NFTs, and performing transactions.
 
